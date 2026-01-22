@@ -1,0 +1,368 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url('https://png.pngtree.com/thumb_back/fw800/background/20220522/pngtree-sri-lanka-hand-drawn-cartoon-doodles-illustration-image_1371529.jpg')
+    center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 8%;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.logo span {
+  color: #f5c16c;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #cccccc;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f5c16c;
+}
+
+.nav-btn {
+  text-decoration: none;
+  padding: 10px 22px;
+  background-color: #f5c16c;
+  color: #000;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background-color: #e0ac55;
+}
+
+/* ===== HERO CONTENT ===== */
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 8%;
+  max-width: 720px;
+}
+
+.hero-content h1 {
+  font-size: clamp(32px, 6vw, 56px);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: clamp(15px, 2.5vw, 18px);
+  color: #dddddd;
+  margin-bottom: 35px;
+}
+
+/* ===== BUTTONS ===== */
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  padding: 14px 32px;
+  background-color: #f5c16c;
+  color: #000;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-secondary {
+  padding: 14px 32px;
+  border: 2px solid #f5c16c;
+  color: #f5c16c;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: #f5c16c;
+  color: #000;
+}
+
+/* ===== IMAGES ===== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===== FLEX ===== */
+.flex {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 20px 5%;
+  }
+
+  .hero-content {
+    padding: 0 5%;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .hero-content {
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+/* ===== RIGHT SIDE LOGO IMAGE ===== */
+.logo-img {
+  width: 200px;        /* size */
+  height: auto;
+  cursor: pointer;
+}
+
+/* mobile size adjust */
+@media (max-width: 600px) {
+  .logo-img {
+    width: 190px;
+  }
+}
+/* ===== PLACES SECTION ===== */
+.places-section {
+  background: #0d0d0d; /* same site background */
+  padding: 80px 8%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 60px;
+  color: #f5c16c;
+}
+
+.place-card {
+  display: flex;
+  gap: 30px;
+  background: #ffffff;
+  color: #000;
+  border-radius: 18px;
+  margin-bottom: 50px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+}
+
+.place-card img {
+  width: 40%;
+  object-fit: cover;
+}
+
+.place-content {
+  padding: 35px;
+}
+
+.place-content h3 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #0a7c5f;
+}
+
+.place-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* ===== MOBILE VIEW ===== */
+@media (max-width: 768px) {
+  .place-card {
+    flex-direction: column;
+  }
+
+  .place-card img {
+    width: 100%;
+    height: 240px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+}
+/* ===== SOCIAL ICONS ===== */
+.social-icons {
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 999;
+}
+
+.social-icons a {
+  width: 48px;
+  height: 48px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-icons a img {
+  width: 26px;
+  height: 26px;
+}
+
+.social-icons a:hover {
+  transform: scale(1.15);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+}
+
+/* Mobile size adjust */
+@media (max-width: 600px) {
+  .social-icons {
+    right: 15px;
+    bottom: 20px;
+  }
+
+  .social-icons a {
+    width: 42px;
+    height: 42px;
+  }
+
+  .social-icons a img {
+    width: 22px;
+    height: 22px;
+  }
+}
+/* ===== SCROLL INDICATOR ===== */
+.scroll-indicator {
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  z-index: 5;
+}
+
+.scroll-indicator span {
+  display: block;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+/* Mouse shape */
+.mouse {
+  width: 28px;
+  height: 48px;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.wheel {
+  width: 6px;
+  height: 10px;
+  background: #ffffff;
+  border-radius: 3px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scrollWheel 1.5s infinite;
+}
+
+/* Animation */
+@keyframes scrollWheel {
+  0% {
+    opacity: 1;
+    top: 10px;
+  }
+  100% {
+    opacity: 0;
+    top: 28px;
+  }
+}
+
+/* Mobile adjust */
+@media (max-width: 600px) {
+  .scroll-indicator {
+    bottom: 25px;
+  }
+
+  .scroll-indicator span {
+    font-size: 12px;
+  }
+}
