@@ -336,3 +336,18 @@ body {
     text-align: center;
   }
 }
+/* FORCE MOBILE HERO TITLE SIZE */
+@media (max-width: 600px) {
+  header.hero .hero-content h1 {
+    font-size: 32px !important;
+    font-weight: 800;
+    line-height: 1.35;
+    text-align: center;
+    letter-spacing: 0.6px;
+  }
+}
+@media (max-width: 768px) {
+  .hero-buttons {
+    margin-bottom: 120px;
+  }
+}
