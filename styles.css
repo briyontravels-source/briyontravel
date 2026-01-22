@@ -470,3 +470,30 @@ body {
     box-shadow: 0 0 0 rgba(255,255,255,0);
   }
 }
+@media screen and (max-width: 1024px) {
+
+  .hero .hero-buttons .btn-primary,
+  .hero .hero-buttons .btn-secondary {
+    animation: mobilePulse 2.5s ease-in-out infinite !important;
+  }
+
+}
+
+/* animation */
+@keyframes mobilePulse {
+  0% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 0 10px rgba(255,255,255,0.2);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.06);
+    box-shadow: 0 0 28px rgba(255,255,255,0.6);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 0 10px rgba(255,255,255,0.2);
+  }
+}
+.hero-buttons a {
+  will-change: transform;
+}
