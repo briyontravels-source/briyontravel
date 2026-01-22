@@ -366,3 +366,101 @@ img {
     font-size: 12px;
   }
 }
+/* =========================
+   MOBILE OPTIMIZATION
+   ========================= */
+@media (max-width: 768px) {
+
+  /* HERO TEXT */
+  .hero-content h1 {
+    font-size: 26px;
+    line-height: 1.3;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  /* BUTTONS */
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-buttons a {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+
+  /* SCROLL INDICATOR */
+  .scroll-indicator span {
+    font-size: 13px;
+  }
+
+  /* SOCIAL ICONS */
+  .social-icons {
+    right: 10px;
+    bottom: 20px;
+  }
+
+  .social-icons img {
+    width: 38px;
+    height: 38px;
+  }
+
+  /* SECTION TITLE */
+  .section-title {
+    font-size: 24px;
+    text-align: center;
+    padding: 0 12px;
+  }
+
+  /* PLACE CARD */
+  .place-card {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  .place-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+  }
+
+  .place-content {
+    padding: 18px 16px;
+  }
+
+  .place-content h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .place-content p {
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: justify;
+  }
+}
+
+/* EXTRA SMALL DEVICES */
+@media (max-width: 480px) {
+
+  .hero-content h1 {
+    font-size: 23px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .place-content p {
+    font-size: 14.5px;
+  }
+}
