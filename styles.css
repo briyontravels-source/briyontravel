@@ -351,3 +351,83 @@ body {
     margin-bottom: 120px;
   }
 }
+/* ===============================
+   HERO BUTTONS – PREMIUM STYLE
+=================================*/
+
+.hero-buttons {
+  display: flex;
+  gap: 18px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+/* COMMON BUTTON STYLE */
+.hero-buttons a {
+  text-decoration: none;
+  padding: 14px 34px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+/* SELECT YOUR PACKAGE – UNIQUE GLOW */
+.btn-primary {
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(255, 87, 34, 0.45);
+}
+
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: 0.5s;
+}
+
+.btn-primary:hover::after {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 18px 35px rgba(255, 87, 34, 0.7);
+}
+
+/* CONTACT US – DECENT OUTLINE STYLE */
+.btn-secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn-secondary:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+/* ===============================
+   MOBILE RESPONSIVE
+=================================*/
+@media (max-width: 768px) {
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    text-align: center;
+    padding: 14px 0;
+  }
+}
