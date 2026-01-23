@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Gallery</title>
+
+<style>
+:root{
+  --bg-main:#0e1117;
+  --bg-card:#161b22;
+  --accent:#ff9800;
+  --text-main:#e6e6e6;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:radial-gradient(circle at top, #1c1f26, #0e1117 70%);
+  color:var(--text-main);
+  padding:20px;
+  min-height:100vh;
+}
+
+a{
+  color:var(--accent);
+  text-decoration:none;
+}
+
+.home-link{
+  display:inline-block;
+  margin-bottom:20px;
+  font-weight:bold;
+}
+
+h1{
+  text-align:center;
+  margin-bottom:50px;
+  font-size:clamp(30px,5vw,44px);
+}
+
+section{
+  margin-bottom:70px;
+}
+
+section h2{
+  margin-bottom:25px;
+  padding-left:18px;
+  border-left:6px solid var(--accent);
+  font-size:clamp(22px,4vw,30px);
+}
+
+/* GRID */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:24px;
+}
+
+/* PHOTO CARD */
+.photo{
+  position:relative;
+  border-radius:16px;
+  overflow:hidden;
+  cursor:pointer;
+  background:var(--bg-card);
+  box-shadow:0 15px 35px rgba(0,0,0,0.5);
+}
+
+/* IMAGE */
+.photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:0.45s ease;
+}
+
+/* HOVER */
+.photo:hover img{
+  transform:scale(1.15);
+}
+
+/* FULLSCREEN */
+.photo:target{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.95);
+  z-index:999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* FULLSCREEN IMAGE */
+.photo:target img{
+  max-width:90%;
+  max-height:90%;
+  border-radius:14px;
+  animation:zoom 0.4s ease;
+}
+
+@keyframes zoom{
+  from{transform:scale(0.7);}
+  to{transform:scale(1);}
+}
+
+/* CLOSE BUTTON */
+.close{
+  position:fixed;
+  top:20px;
+  right:20px;
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  background:rgba(0,0,0,0.7);
+  color:#fff;
+  font-size:32px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:0.3s;
+  z-index:1000;
+}
+
+.close:hover{
+  background:var(--accent);
+  color:#000;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .gallery{
+    gap:16px;
+  }
+}
+/* ===== VEHICLE GRID ===== */
+.vehicle-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:24px;
+}
+
+.vehicle-card{
+  background:var(--bg-card);
+  border-radius:16px;
+  overflow:hidden;
+  text-align:center;
+  box-shadow:0 12px 30px rgba(0,0,0,0.5);
+  transition:transform 0.35s ease;
+}
+
+.vehicle-card img{
+  width:100%;
+  height:140px;
+  object-fit:cover;
+  transition:0.4s ease;
+}
+
+.vehicle-card p{
+  padding:14px 10px;
+  font-weight:bold;
+  letter-spacing:1px;
+}
+
+/* hover animation only */
+.vehicle-card:hover{
+  transform:translateY(-6px);
+}
+
+.vehicle-card:hover img{
+  transform:scale(1.1);
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .vehicle-card img{
+    height:120px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<a href="../index.html" class="home-link">← HOME</a>
+
+<h1>Our Gallery</h1>
+
+<section>
+<h2>Hotel Photos</h2>
+
+<div class="gallery">
+
+<a href="#img1" class="photo" id="img1">
+  <img src="hotel1.webp" alt="">
+</a>
+
+<a href="#img2" class="photo" id="img2">
+  <img src="hotel2.jpg" alt="">
+</a>
+
+<a href="#img3" class="photo" id="img3">
+  <img src="hotel3.jpg" alt="">
+</a>
+
+<a href="#img4" class="photo" id="img4">
+  <img src="hotel4.webp" alt="">
+</a>
+
+<a href="#img5" class="photo" id="img5">
+  <img src="hotel5.jpg" alt="">
+</a>
+
+<a href="#img6" class="photo" id="img6">
+  <img src="hotel6.jpg" alt="">
+</a>
+
+<a href="#img7" class="photo" id="img7">
+  <img src="hotel7.jpg" alt="">
+</a>
+
+<a href="#img8" class="photo" id="img8">
+  <img src="hotel8.jpg" alt="">
+</a>
+
+<a href="#img9" class="photo" id="img9">
+  <img src="hotel9.jpg" alt="">
+</a>
+
+<a href="#img10" class="photo" id="img10">
+  <img src="hotel10.jpg" alt="">
+</a>
+
+</div>
+</section>
+
+<section>
+  <h2>Vehicles</h2>
+
+  <div class="vehicle-grid">
+
+    <div class="vehicle-card">
+      <img src="car.jpg" alt="Cars">
+      <p>CARS</p>
+    </div>
+
+    <div class="vehicle-card">
+      <img src="van.jpg" alt="Vans">
+      <p>VANS</p>
+    </div>
+
+    <div class="vehicle-card">
+      <img src="bike.jpg" alt="Bikes">
+      <p>BIKES</p>
+    </div>
+
+    <div class="vehicle-card">
+      <img src="tuktuk.jpg" alt="Three Wheels">
+      <p>THREE WHEELS</p>
+    </div>
+
+    <div class="vehicle-card">
+      <img src="boat.jpg" alt="Boats">
+      <p>BOATS</p>
+    </div>
+
+  </div>
+</section>
+<!-- CLOSE BUTTON -->
+<a href="#" class="close">×</a>
+
+</body>
+</html>

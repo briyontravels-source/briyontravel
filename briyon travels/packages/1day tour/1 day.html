@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>1 Day Tour Package | Briyon Travels</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI", sans-serif;
+}
+
+body{
+  background:#cfcfcf; /* darker background */
+  color:#333;
+}
+
+/* ================= HERO ================= */
+.hero{
+  min-height:60vh;   /* reduced height */
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:50px 20px 20px;
+}
+
+.hero-box{
+  background:#ffffff;
+  padding:35px 55px;
+  border-radius:16px;
+  text-align:center;
+  animation:fadeUp 1.2s ease;
+  box-shadow:0 18px 40px rgba(0,0,0,0.15);
+}
+
+.hero-box h1{
+  font-size:42px;
+  color:#ff8c00; /* orange title */
+}
+
+.hero-box p{
+  margin-top:10px;
+  font-size:17px;
+  color:#444;
+}
+
+/* ================= BUTTON AREA ================= */
+.hero-nav{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  gap:40px;
+  padding:25px 8%;
+  margin-top:20px; /* space reduced */
+  animation:fadeUp 1.5s ease;
+}
+
+.hero-nav a{
+  flex:1;
+  text-align:center;
+  padding:18px 0;
+  font-size:18px;
+  font-weight:600;
+  text-decoration:none;
+  border-radius:40px;
+  transition:0.3s;
+}
+
+.btn-back{
+  background:#4b4b4b;
+  color:#fff;
+}
+
+.btn-back:hover{
+  background:#333;
+}
+
+.btn-next{
+  background:#ff9c00;
+  color:#000;
+}
+
+.btn-next:hover{
+  background:#ff8500;
+}
+
+/* ================= MAIN CONTENT ================= */
+.main-topic{
+  padding:60px 8%;
+}
+
+/* ================= ACCORDION ================= */
+.accordion{
+  background:#fff;
+  border-radius:14px;
+  margin-bottom:35px;
+  overflow:hidden;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+.accordion summary{
+  padding:26px 30px;
+  font-size:26px;
+  font-weight:600;
+  cursor:pointer;
+  background:#f7f7f7;
+  list-style:none;
+}
+
+.accordion summary::marker{
+  display:none;
+}
+
+.accordion summary span{
+  color:#999;
+  margin-right:12px;
+}
+
+.accordion[open] summary{
+  background:#fff;
+  border-bottom:1px solid #eee;
+}
+
+/* ================= SUB SECTIONS ================= */
+.sub{
+  padding:60px 8%;
+}
+
+.sub.light{
+  background:#fafafa;
+}
+
+.sub-box{
+  display:flex;
+  align-items:center;
+  gap:50px;
+  animation:fadeUp 1.2s ease;
+}
+
+.sub-box.reverse{
+  flex-direction:row-reverse;
+}
+
+.sub-box img{
+  width:50%;
+  border-radius:14px;
+  transition:0.4s;
+}
+
+.sub-box img:hover{
+  transform:scale(1.05);
+}
+
+.text h3{
+  font-size:28px;
+  margin-bottom:12px;
+}
+
+.text p, .text ul{
+  font-size:16px;
+  line-height:1.8;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(50px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+  .hero-box h1{
+    font-size:34px;
+  }
+
+  .hero-nav{
+    flex-direction:column;
+    gap:18px;
+    padding:20px 6%;
+  }
+
+  .sub-box,
+  .sub-box.reverse{
+    flex-direction:column;
+  }
+
+  .sub-box img{
+    width:100%;
+  }
+
+  .accordion summary{
+    font-size:22px;
+  }
+}
+</style>
+</head>
+
+<body>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-box">
+    <h1>1 Day Tour Package</h1>
+    <p>Perfect One Day Experience in Sri Lanka</p>
+  </div>
+</section>
+
+<!-- BUTTONS -->
+<div class="hero-nav">
+  <a href="../packages.html" class="btn-back">← Back</a>
+  <a href="1 day tour.html" class="btn-next">Continue →</a>
+</div>
+
+<section class="main-topic">
+
+  <!-- TOPIC 1 -->
+  <details class="accordion">
+    <summary><span>01</span>Galle FORT TOUR<br><h5>details</h5> </summary>
+    <div class="sub"> <div class="sub-box"> <img src="gall fort.jpg"> <div class="text"> <h3>Main Destination</h3> <p>“The main destination of this journey is Galle Fort, a historic coastal fortress renowned for its rich heritage, colonial architecture, and stunning ocean views. The tour starts with a pickup from Bentota or the airport, based on your preference.”</p> </div> </div> </div> <div class="sub light"> <div class="sub-box reverse"> <img src="road.jpg"> <div class="text"> <h3>Journey Route</h3> <p>“The roads are well maintained, allowing you to travel comfortably in our air-conditioned vehicle and enjoy these places along the way.”</p> </div> </div> </div> <div class="sub"> <div class="sub-box"> <img src="safaryandkesbo.jpg"> <div class="text"> <h3>Stop Places</h3> <p> <ul><b> <li>Sea Turtle Hatchery (Hikkaduwa / Kosgoda)</li> <li>River Safari (Madu Ganga)</li> </b> </ul> “Throughout the tour, you are free to visit places like these based on your interests.” </p> </div> </div> </div> <div class="sub light"> <div class="sub-box reverse"> <img src="cafee.jpg"> <div class="text"> <h3>Food & Activities</h3> <p> <ul><b> <li>Cafe 44 / Pedlar’s Inn / Isle of Gelato</li> <li>Rooftop cafes</li> </b></ul> “With our experienced guide, you can stop at places like these to enjoy meals, have refreshments, and take short breaks to relax during the journey. These are just a few examples.” </p> </div> </div> </div> <div class="sub"> <div class="sub-box"> <img src="hotel.jpg"> <div class="text"> <h3>Final Experience</h3> <p>“At the conclusion of the tour, following a mutual discussion and confirmation, guests will be safely dropped off at either our reserved hotel or their preferred hotel.”</p> </div> </div> </div> </details>
+  </details>
+
+  <!-- TOPIC 2 -->
+  <details class="accordion">
+    <summary><span>02</span> Tour Experience Overview<h5>details</h5></summary>
+  </details>
+
+  <!-- TOPIC 3 -->
+  <details class="accordion">
+    <summary><span>03</span> Tour Experience Overview<h5>details</h5></summary>
+  </details>
+
+  <!-- TOPIC 4 -->
+  <details class="accordion">
+    <summary><span>04</span> Tour Experience Overview<h5>details</h5></summary>
+  </details>
+
+</section>
+
+
+</body>
+</html>

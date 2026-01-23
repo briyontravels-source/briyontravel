@@ -1,0 +1,324 @@
+/* =====================
+   RESET & GLOBAL
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* =====================
+   HERO SECTION
+===================== */
+.hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url('https://png.pngtree.com/thumb_back/fw800/background/20220522/pngtree-sri-lanka-hand-drawn-cartoon-doodles-illustration-image_1371529.jpg')
+    center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 8%;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #f5c16c;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #cccccc;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: #f5c16c;
+}
+
+.logo-img {
+  width: 200px;
+}
+
+/* =====================
+   HERO CONTENT
+===================== */
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 8%;
+  max-width: 720px;
+}
+
+.hero-content h1 {
+  font-size: clamp(32px, 6vw, 56px);
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: clamp(15px, 2.5vw, 18px);
+  color: #dddddd;
+  margin-bottom: 35px;
+}
+
+/* =====================
+   HERO BUTTONS
+===================== */
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* common */
+.hero-buttons a {
+  min-height: 52px;
+  padding: 0 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* primary */
+.btn-primary {
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(255, 87, 34, 0.45);
+}
+
+/* shine */
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -100%;
+  background: rgba(255,255,255,0.3);
+  transition: 0.5s;
+}
+
+.btn-primary:hover::after {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 18px 35px rgba(255, 87, 34, 0.7);
+}
+
+/* secondary */
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+/* =====================
+   SCROLL INDICATOR
+===================== */
+.scroll-indicator {
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.scroll-indicator span {
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.mouse {
+  width: 28px;
+  height: 48px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  margin: 10px auto 0;
+}
+
+.wheel {
+  width: 6px;
+  height: 10px;
+  background: #fff;
+  border-radius: 3px;
+  margin: 6px auto;
+  animation: scrollWheel 1.5s infinite;
+}
+
+@keyframes scrollWheel {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(16px); }
+}
+
+/* =====================
+   SOCIAL ICONS
+===================== */
+.social-icons {
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 999;
+}
+
+.social-icons a {
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons img {
+  width: 26px;
+}
+
+/* =====================
+   PLACES SECTION
+===================== */
+.places-section {
+  padding: 80px 8%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  color: #f5c16c;
+  margin-bottom: 60px;
+}
+
+.place-card {
+  display: flex;
+  gap: 30px;
+  background: #fff;
+  color: #000;
+  border-radius: 18px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.place-card img {
+  width: 40%;
+  object-fit: cover;
+}
+
+.place-content {
+  padding: 35px;
+}
+
+/* =====================
+   MOBILE & TABLET
+===================== */
+@media (max-width: 1024px) {
+
+  .btn-primary,
+  .btn-secondary {
+    animation: mobilePulse 2.6s ease-in-out infinite;
+  }
+}
+
+@keyframes mobilePulse {
+  0%   { transform: translateY(0) scale(1); }
+  50%  { transform: translateY(-8px) scale(1.06); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .hero-content {
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 120px;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+  }
+
+  .social-icons {
+    display: none;
+  }
+
+  .place-card {
+    flex-direction: column;
+  }
+
+  .place-card img {
+    width: 100%;
+    height: 240px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+}
